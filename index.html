@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+</head>
+<title>Project | smart infrastructure monitoring</title>
+<!--CSS CONNECTION -->
+<link rel="stylsheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!--SIDEBAR -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="Brand-logo">
+                AI
+            </div>
+            <div>
+                <h2>ProjectAi</h2>
+                <small>Smart Project Monitoring</small>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <button class="nav-item active" data-page="dashboard">
+
+
+                <span>⌂</span>
+                Dashboard
+
+            </button>
+
+
+            <button class="nav-item" data-page="documents">
+
+                <span>▣</span>
+                Documents
+
+            </button>
+
+
+            <button class="nav-item" data-page="schedule">
+
+                <span>◫</span>
+                Schedule
+
+            </button>
+
+
+            <button class="nav-item" data-page="progress">
+
+                <span>◉</span>
+                Progress
+
+            </button>
+
+
+            <button class="nav-item" data-page="risks">
+
+                <span>⚠</span>
+                Risks & Delays
+
+            </button>
+
+
+            <button class="nav-item" data-page="assistant">
+
+                <span>✦</span>
+                AI Assistant
+
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                System Ready
+
+            </div>
+
+            <small>
+                SIH Project Prototype
+            </small>
+
+        </div>
+
+    </aside>
+    <!--main area-->
+    <main class="main">
+
+        <!--TOPBAR-->
+        <header class="topbar">
+            <div>
+                <h1 id="pagetitle">
+                    project dashboard
+                </h1>
+                <p id="pageSubtitle">
+                    Smart infrastructure Project Monitoring
+                </p>
+            </div>
+            <div class="top-action">
+                <button id="notificationBtn" class="icon-btn">
+                    🔔
+                </button>
+                <div class="profile">
+                    <div class="profile-avatar">
+                        VR
+                    </div>
+                    <div>
+                        <strong>
+                            project Manager
+                        </strong>
+                        <small>
+                            Vivek Raj
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page container-->
+        <div class="page-container">
+
+            <!-- dashboard page-->
+            <section id="dashboard" class="page active-page">
+                <div class="page-heading">
+                    <div>
+                        <spam class="eyebrow">
+                            PROJECT OVERVIEW
+                        </spam>
+                        <h2>
+                            Good morning, Vivek 👋
+                        </h2>
+                        <p>
+                            Monitor execution ,schedule,
+                            documents and project risks.
+                        </p>
+                    </div>
+                    <button class="primar-btn" data-page="documents">
+                        + Upload Report
+                    </button>
+                </div>
+
+
+                <!--stat cards-->
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">
+                            ◉
+                        </div>
+                        <div>
+
+                            <span>
+                                Overall Progress
+                            </span>
+                            <strong id="overallprogress">
+                                0%
+                            </strong>
+                            <small class="positive">
+                                Project exexution
+                            </small>
+
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple">
+                            ▣
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+</body>
+
+</html>
