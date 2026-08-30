@@ -2,186 +2,548 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-</head>
-<title>Project | smart infrastructure monitoring</title>
-<!--CSS CONNECTION -->
-<link rel="stylsheet" href="style.css">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ProjectAI - Smart Project Monitoring</title>
+
+    <!-- CSS connect -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 
 <body>
 
-    <!--SIDEBAR -->
+    <!-- ================= SIDEBAR ================= -->
+
     <aside class="sidebar">
-        <div class="brand">
-            <div class="Brand-logo">
-                AI
-            </div>
-            <div>
-                <h2>ProjectAi</h2>
-                <small>Smart Project Monitoring</small>
-            </div>
+
+        <div class="logo">
+
+            <h2>ProjectAI</h2>
+
+            <p>Smart Project Monitoring</p>
+
         </div>
-        <nav class="sidebar-nav">
-            <button class="nav-item active" data-page="dashboard">
 
 
-                <span>⌂</span>
-                Dashboard
+        <nav>
 
+            <button class="nav-btn active" data-page="dashboard">
+                🏠 Dashboard
             </button>
 
-
-            <button class="nav-item" data-page="documents">
-
-                <span>▣</span>
-                Documents
-
+            <button class="nav-btn" data-page="documents">
+                📄 Documents
             </button>
 
-
-            <button class="nav-item" data-page="schedule">
-
-                <span>◫</span>
-                Schedule
-
+            <button class="nav-btn" data-page="schedule">
+                📅 Schedule
             </button>
 
-
-            <button class="nav-item" data-page="progress">
-
-                <span>◉</span>
-                Progress
-
+            <button class="nav-btn" data-page="progress">
+                📊 Progress
             </button>
 
-
-            <button class="nav-item" data-page="risks">
-
-                <span>⚠</span>
-                Risks & Delays
-
+            <button class="nav-btn" data-page="risks">
+                ⚠️ Risks & Delays
             </button>
 
-
-            <button class="nav-item" data-page="assistant">
-
-                <span>✦</span>
-                AI Assistant
-
+            <button class="nav-btn" data-page="assistant">
+                🤖 AI Assistant
             </button>
 
         </nav>
 
-
-        <div class="sidebar-footer">
-
-            <div class="system-status">
-
-                <span class="status-dot"></span>
-
-                System Ready
-
-            </div>
-
-            <small>
-                SIH Project Prototype
-            </small>
-
-        </div>
-
     </aside>
-    <!--main area-->
+
+
+
+    <!-- ================= MAIN AREA ================= -->
+
     <main class="main">
 
-        <!--TOPBAR-->
+        <!-- TOP BAR -->
+
         <header class="topbar">
+
             <div>
-                <h1 id="pagetitle">
-                    project dashboard
-                </h1>
+
+                <h2 id="pageTitle">
+                    Project Dashboard
+                </h2>
+
                 <p id="pageSubtitle">
-                    Smart infrastructure Project Monitoring
+                    Monitor your infrastructure project
                 </p>
+
             </div>
-            <div class="top-action">
-                <button id="notificationBtn" class="icon-btn">
-                    🔔
-                </button>
-                <div class="profile">
-                    <div class="profile-avatar">
-                        VR
-                    </div>
-                    <div>
-                        <strong>
-                            project Manager
-                        </strong>
-                        <small>
-                            Vivek Raj
-                        </small>
-                    </div>
-                </div>
+
+
+            <div class="profile">
+
+                👤 <span>Project Manager</span>
+
             </div>
+
         </header>
 
-        <!-- Page container-->
-        <div class="page-container">
 
-            <!-- dashboard page-->
-            <section id="dashboard" class="page active-page">
-                <div class="page-heading">
-                    <div>
-                        <spam class="eyebrow">
-                            PROJECT OVERVIEW
-                        </spam>
-                        <h2>
-                            Good morning, Vivek 👋
-                        </h2>
-                        <p>
-                            Monitor execution ,schedule,
-                            documents and project risks.
-                        </p>
-                    </div>
-                    <button class="primar-btn" data-page="documents">
-                        + Upload Report
-                    </button>
+
+        <!-- ================================================= -->
+        <!-- DASHBOARD -->
+        <!-- ================================================= -->
+
+        <section id="dashboard" class="page active">
+
+            <div class="welcome">
+
+                <h1>Project Overview</h1>
+
+                <p>
+                    Track project execution, documents,
+                    schedule and risks from one place.
+                </p>
+
+            </div>
+
+
+            <!-- STAT CARDS -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <span>Overall Progress</span>
+
+                    <h2 id="progressValue">--</h2>
+
+                    <small>Project completion</small>
+
                 </div>
 
 
-                <!--stat cards-->
+                <div class="stat-card">
 
-                <div class="stats-grid">
-                    <div class="stat-card">
+                    <span>Total Activities</span>
 
-                        <div class="stat-icon blue">
-                            ◉
+                    <h2 id="activityValue">--</h2>
+
+                    <small>Scheduled activities</small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>Delayed Activities</span>
+
+                    <h2 id="delayValue">--</h2>
+
+                    <small>Need attention</small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>Documents</span>
+
+                    <h2 id="documentValue">--</h2>
+
+                    <small>Processed reports</small>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT STATUS -->
+
+            <div class="dashboard-grid">
+
+                <div class="box">
+
+                    <h3>Project Status</h3>
+
+                    <div class="big-progress">
+
+                        <div
+                            id="progressBar"
+                            class="progress-fill">
                         </div>
+
+                    </div>
+
+                    <p id="progressText">
+                        Backend data will appear here.
+                    </p>
+
+                </div>
+
+
+                <div class="box">
+
+                    <h3>AI Analysis</h3>
+
+                    <div class="ai-status">
+
+                        🤖
+
                         <div>
 
-                            <span>
-                                Overall Progress
-                            </span>
-                            <strong id="overallprogress">
-                                0%
+                            <strong>
+                                AI Monitoring
                             </strong>
-                            <small class="positive">
-                                Project exexution
-                            </small>
+
+                            <p>
+                                Ready for document analysis
+                            </p>
 
                         </div>
+
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-icon purple">
-                            ▣
-                        </div>
-                    </div>
+
                 </div>
-            </section>
-        </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- DOCUMENTS -->
+        <!-- ================================================= -->
+
+        <section id="documents" class="page">
+
+            <h1>Project Documents</h1>
+
+            <p class="section-description">
+                Upload daily progress reports,
+                site diaries or project documents.
+            </p>
+
+
+            <!-- UPLOAD AREA -->
+
+            <div id="dropArea" class="drop-area">
+
+                <div class="upload-icon">
+                    📄
+                </div>
+
+                <h2>
+                    Upload Project Document
+                </h2>
+
+                <p>
+                    Drag & drop your file here
+                </p>
+
+                <p class="supported">
+                    Supported: PDF, DOCX, XLSX, CSV
+                </p>
+
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept=".pdf,.docx,.xlsx,.csv"
+                    hidden
+                >
+
+
+                <button
+                    id="chooseFile"
+                    class="primary-btn">
+
+                    Choose File
+
+                </button>
+
+            </div>
+
+
+            <!-- SELECTED FILE -->
+
+            <div
+                id="fileInfo"
+                class="file-info hidden">
+
+                <div>
+
+                    <strong id="fileName">
+                        File Name
+                    </strong>
+
+                    <p id="fileSize">
+                        File Size
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="scanBtn"
+                    class="primary-btn">
+
+                    🔍 Scan Document
+
+                </button>
+
+            </div>
+
+
+            <!-- PROCESSING -->
+
+            <div
+                id="processing"
+                class="processing hidden">
+
+                <div class="loader"></div>
+
+                <div>
+
+                    <strong>
+                        Processing Document...
+                    </strong>
+
+                    <p>
+                        AI extraction will be performed
+                        by the backend.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div
+                id="result"
+                class="result">
+
+                <div class="empty">
+
+                    <span>📋</span>
+
+                    <h3>
+                        No document scanned
+                    </h3>
+
+                    <p>
+                        Upload a report and click
+                        "Scan Document".
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- SCHEDULE -->
+        <!-- ================================================= -->
+
+        <section id="schedule" class="page">
+
+            <h1>Project Schedule</h1>
+
+            <p class="section-description">
+                Compare planned and actual activities.
+            </p>
+
+
+            <div class="table-box">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Activity</th>
+
+                            <th>Planned</th>
+
+                            <th>Actual</th>
+
+                            <th>Variance</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="scheduleTable">
+
+                        <tr>
+
+                            <td colspan="5">
+
+                                No schedule data available.
+                                Backend will provide the data.
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- PROGRESS -->
+        <!-- ================================================= -->
+
+        <section id="progress" class="page">
+
+            <h1>Progress Monitoring</h1>
+
+            <p class="section-description">
+                Monitor planned vs actual project progress.
+            </p>
+
+
+            <div class="progress-container">
+
+                <div class="empty">
+
+                    <span>📊</span>
+
+                    <h3>
+                        Progress data unavailable
+                    </h3>
+
+                    <p>
+                        Backend data will be displayed here.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- RISKS -->
+        <!-- ================================================= -->
+
+        <section id="risks" class="page">
+
+            <h1>Risks & Delays</h1>
+
+            <p class="section-description">
+                Monitor project risks and delayed activities.
+            </p>
+
+
+            <div id="riskContainer">
+
+                <div class="empty">
+
+                    <span>⚠️</span>
+
+                    <h3>
+                        No risk data available
+                    </h3>
+
+                    <p>
+                        AI-generated risks will appear here
+                        after backend integration.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================================= -->
+        <!-- AI ASSISTANT -->
+        <!-- ================================================= -->
+
+        <section id="assistant" class="page">
+
+            <h1>AI Project Assistant</h1>
+
+            <p class="section-description">
+                Ask questions about your project.
+            </p>
+
+
+            <div
+                id="chatMessages"
+                class="chat-box">
+
+                <div class="bot-message">
+
+                    <strong>
+                        🤖 ProjectAI
+                    </strong>
+
+                    <p>
+                        Hello! I am your project assistant.
+                        Ask me about project progress,
+                        delays or activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="chatInput"
+                    placeholder="Ask about your project..."
+                >
+
+
+                <button
+                    id="sendBtn"
+                    class="primary-btn">
+
+                    Send
+
+                </button>
+
+            </div>
+
+        </section>
+
     </main>
+
+
+
+    <!-- ================================================= -->
+    <!-- JAVASCRIPT CONNECT -->
+    <!-- ================================================= -->
+
+    <script src="script.js"></script>
 
 </body>
 
