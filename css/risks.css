@@ -1,0 +1,46 @@
+/* =========================
+   RISKS PAGE
+========================= */
+
+#riskContainer {
+
+    margin-top: 25px;
+
+}
+
+
+/* Empty risk state */
+
+#riskContainer .empty {
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 35px;
+
+    text-align: center;
+
+}
+
+
+#riskContainer .empty span {
+
+    font-size: 42px;
+
+    display: block;
+
+    margin-bottom: 12px;
+
+}
+
+
+#riskContainer .empty p {
+
+    color: #64748b;
+
+    margin-top: 8px;
+
+}

@@ -1,0 +1,200 @@
+/* =========================
+   DOCUMENT PAGE
+========================= */
+
+.section-description {
+    color: #64748b;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   UPLOAD AREA
+========================= */
+
+.drop-area {
+    background: white;
+
+    border: 2px dashed #94a3b8;
+
+    border-radius: 15px;
+
+    padding: 55px;
+
+    text-align: center;
+
+    transition: 0.25s;
+
+    cursor: pointer;
+}
+
+
+/* Mouse hover */
+
+.drop-area:hover {
+
+    border-color: #2563eb;
+
+    background: #eff6ff;
+
+}
+
+
+/* JavaScript drag class */
+
+.drop-area.drag {
+
+    border-color: #2563eb;
+
+    background: #eff6ff;
+
+}
+
+
+/* Upload icon */
+
+.upload-icon {
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+
+.drop-area h2 {
+    margin-bottom: 10px;
+}
+
+
+.drop-area p {
+    color: #64748b;
+
+    margin-bottom: 7px;
+}
+
+
+.supported {
+    font-size: 12px;
+}
+
+
+/* =========================
+   FILE INFORMATION
+========================= */
+
+.file-info {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    margin-top: 20px;
+
+}
+
+
+.file-info p {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+
+}
+
+
+/* =========================
+   PROCESSING
+========================= */
+
+.processing {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: #eff6ff;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    border-radius: 10px;
+
+    color: #1d4ed8;
+
+}
+
+
+/* Loading circle */
+
+.loader {
+
+    width: 27px;
+
+    height: 27px;
+
+    border: 3px solid #bfdbfe;
+
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   RESULT
+========================= */
+
+.result {
+    margin-top: 25px;
+}
+
+
+.result-card {
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 35px;
+
+    text-align: center;
+
+}
+
+
+.result-card p {
+
+    color: #64748b;
+
+    margin-top: 8px;
+
+}

@@ -1,0 +1,122 @@
+/* =========================
+   CHAT BOX
+========================= */
+
+.chat-box {
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    height: 400px;
+
+    overflow-y: auto;
+
+    margin-top: 20px;
+
+}
+
+
+/* =========================
+   BOT MESSAGE
+========================= */
+
+.bot-message {
+
+    background: #eff6ff;
+
+    max-width: 75%;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.bot-message p {
+
+    margin-top: 7px;
+
+    line-height: 1.5;
+
+    color: #475569;
+
+}
+
+
+/* =========================
+   USER MESSAGE
+========================= */
+
+.user-message {
+
+    background: #2563eb;
+
+    color: white;
+
+    max-width: 75%;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    margin-left: auto;
+
+    margin-bottom: 12px;
+
+}
+
+
+.user-message p {
+
+    margin-top: 7px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================
+   CHAT INPUT
+========================= */
+
+.chat-input {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+
+}
+
+
+.chat-input input {
+
+    flex: 1;
+
+    padding: 13px 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+.chat-input input:focus {
+
+    border-color: #2563eb;
+
+}

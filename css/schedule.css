@@ -1,0 +1,56 @@
+/* =========================
+   SCHEDULE TABLE
+========================= */
+
+.table-box {
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 1px solid #e5e7eb;
+
+    margin-top: 20px;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+
+th,
+td {
+
+    padding: 16px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e5e7eb;
+
+}
+
+
+th {
+
+    background: #f8fafc;
+
+    color: #475569;
+
+    font-size: 13px;
+
+}
+
+
+td {
+
+    font-size: 14px;
+
+}

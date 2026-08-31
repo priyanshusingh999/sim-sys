@@ -10,7 +10,19 @@
     <title>ProjectAI - Smart Project Monitoring</title>
 
     <!-- CSS connect -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet" href="css/documents.css">
+
+    <link rel="stylesheet" href="css/schedule.css">
+
+    <link rel="stylesheet" href="css/progress.css">
+
+    <link rel="stylesheet" href="css/risks.css">
+
+    <link rel="stylesheet" href="css/assistant.css">
 
 </head>
 
@@ -171,9 +183,7 @@
 
                     <div class="big-progress">
 
-                        <div
-                            id="progressBar"
-                            class="progress-fill">
+                        <div id="progressBar" class="progress-fill">
                         </div>
 
                     </div>
@@ -250,17 +260,10 @@
                 </p>
 
 
-                <input
-                    type="file"
-                    id="fileInput"
-                    accept=".pdf,.docx,.xlsx,.csv"
-                    hidden
-                >
+                <input type="file" id="fileInput" accept=".pdf,.docx,.xlsx,.csv" hidden>
 
 
-                <button
-                    id="chooseFile"
-                    class="primary-btn">
+                <button id="chooseFile" class="primary-btn">
 
                     Choose File
 
@@ -271,9 +274,7 @@
 
             <!-- SELECTED FILE -->
 
-            <div
-                id="fileInfo"
-                class="file-info hidden">
+            <div id="fileInfo" class="file-info hidden">
 
                 <div>
 
@@ -288,9 +289,7 @@
                 </div>
 
 
-                <button
-                    id="scanBtn"
-                    class="primary-btn">
+                <button id="scanBtn" class="primary-btn">
 
                     🔍 Scan Document
 
@@ -301,9 +300,7 @@
 
             <!-- PROCESSING -->
 
-            <div
-                id="processing"
-                class="processing hidden">
+            <div id="processing" class="processing hidden">
 
                 <div class="loader"></div>
 
@@ -325,9 +322,7 @@
 
             <!-- RESULT -->
 
-            <div
-                id="result"
-                class="result">
+            <div id="result" class="result">
 
                 <div class="empty">
 
@@ -493,9 +488,7 @@
             </p>
 
 
-            <div
-                id="chatMessages"
-                class="chat-box">
+            <div id="chatMessages" class="chat-box">
 
                 <div class="bot-message">
 
@@ -516,16 +509,10 @@
 
             <div class="chat-input">
 
-                <input
-                    type="text"
-                    id="chatInput"
-                    placeholder="Ask about your project..."
-                >
+                <input type="text" id="chatInput" placeholder="Ask about your project...">
 
 
-                <button
-                    id="sendBtn"
-                    class="primary-btn">
+                <button id="sendBtn" class="primary-btn">
 
                     Send
 
@@ -543,7 +530,23 @@
     <!-- JAVASCRIPT CONNECT -->
     <!-- ================================================= -->
 
-    <script src="script.js"></script>
+    <script src="js/navigation.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+    <script src="js/upload.js"></script>
+
+    <script src="js/schedule.js"></script>
+
+    <script src="js/progress.js"></script>
+
+    <script src="js/risks.js"></script>
+
+    <script src="js/assistant.js"></script>
+
+    <script src="js/app.js"></script>
+
+
 
 </body>
 
