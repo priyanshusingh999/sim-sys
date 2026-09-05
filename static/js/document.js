@@ -140,14 +140,46 @@ dropArea.addEventListener("drop", function (event) {
 
 scanButton.addEventListener("click", function () {
 
-    // File select nahi hai
     if (!selectedFile) {
-
         alert("Please select a document first.");
-
         return;
-
     }
+
+    // File ko FormData mein add karo
+    const formData = new FormData();
+    formData.append("file", selectedFile);
+
+    // Backend ko file bhejo
+    fetch("/upload", {
+        method: "POST",
+        body: formData
+    })
+    .then(async response => {
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.error || "Upload failed.");
+        }
+
+        return data;
+    })
+    .then(data => {
+        document.getElementById("result").innerHTML = `
+            <div class="success">
+                <h3>Document uploaded</h3>
+                <p>${data.message}</p>
+            </div>
+        `;
+    })
+    .catch(error => {
+        console.error("Upload failed:", error);
+        document.getElementById("result").innerHTML = `
+            <div class="error">
+                <h3>Upload failed</h3>
+                <p>${error.message}</p>
+            </div>
+        `;
+    });
 
 
     // Processing section show karo

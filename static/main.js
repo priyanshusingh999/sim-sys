@@ -14,7 +14,7 @@ const scripts = [
     'static/js/assistant.js',
     'static/js/risks.js',
     'static/js/schedule.js',
-    'static/js/upload.js',
+    'static/js/document.js',
     'static/js/login.js',
     'static/js/signup.js'
 ];
