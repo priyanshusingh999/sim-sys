@@ -2,8 +2,8 @@ from flask import Flask, jsonify, render_template, request, redirect, url_for, f
 from werkzeug.utils import secure_filename
 from routes.authentication import auth, login_required
 from services.pdf_service import PDFService
-from services.docx_service import DOCXService
-from services.excel_service import XLSXService
+from services.docx_service import DocxService
+from services.excel_service import ExcelService
 from services.csv_service import CSVService
 from services.ocr_service import OCRService
 import os

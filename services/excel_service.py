@@ -2,6 +2,10 @@ import pandas as pd
 import openpyxl
 
 
-def read_excel(file_path):
-    df = pd.read_excel(file_path)
-    return df
+class ExcelService:
+    def __init__(self, file_path):
+        self.file_path = file_path
+
+    def read_excel(self):
+        df = pd.read_excel(self.file_path)
+        return df

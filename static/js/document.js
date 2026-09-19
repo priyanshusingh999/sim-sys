@@ -164,12 +164,38 @@ scanButton.addEventListener("click", function () {
         return data;
     })
     .then(data => {
-        document.getElementById("result").innerHTML = `
-            <div class="success">
-                <h3>Document uploaded</h3>
-                <p>${data.message}</p>
-            </div>
-        `;
+        setTimeout(function () {
+            document.getElementById("result").innerHTML = `
+                <div class="result-card success">
+                    <div class="result-heading">
+                        <span class="result-icon">✓</span>
+                        <div>
+                            <h3>Document scanned successfully</h3>
+                            <p>${data.filename}</p>
+                        </div>
+                    </div>
+                    <div class="demo-result-grid">
+                        <div>
+                            <span>Document type</span>
+                            <strong>Project progress report</strong>
+                        </div>
+                        <div>
+                            <span>Pages detected</span>
+                            <strong>4 pages</strong>
+                        </div>
+                        <div>
+                            <span>Completion status</span>
+                            <strong>On track</strong>
+                        </div>
+                        <div>
+                            <span>Key items found</span>
+                            <strong>12 action items</strong>
+                        </div>
+                    </div>
+                    <p class="demo-note">Demo extraction result. Connect the document analysis service to replace these values with live data.</p>
+                </div>
+            `;
+        }, 2000);
     })
     .catch(error => {
         console.error("Upload failed:", error);
@@ -192,19 +218,13 @@ scanButton.addEventListener("click", function () {
     scanButton.disabled = true;
 
 
-    // Demo ke liye 2 seconds wait
+    // Demo processing ke liye 2 seconds wait
     setTimeout(function () {
 
         // Processing hide
         document
             .getElementById("processing")
             .classList.add("hidden");
-
-
-        // Result show
-        document
-            .getElementById("result")
-            .classList.remove("hidden");
 
 
         // Button enable
