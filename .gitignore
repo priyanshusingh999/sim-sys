@@ -1,2 +1,5 @@
-/config.py
-/requirements.txt
+config.py
+.env
+.env.*
+!.env.example
+requirements.txt
