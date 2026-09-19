@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Documents{% endblock %}
+{% block content %}
+        <section id="documents" class="page active">
+
+            <h1>Project Documents</h1>
+
+            <p class="section-description">
+                Upload daily progress reports,
+                site diaries or project documents.
+            </p>
+
+
+            <!-- UPLOAD AREA -->
+
+            <div id="dropArea" class="drop-area">
+
+                <div class="upload-icon">
+                    📄
+                </div>
+
+                <h2>
+                    Upload Project Document
+                </h2>
+
+                <p>
+                    Drag & drop your file here
+                </p>
+
+                <p class="supported">
+                    Supported: PDF, DOCX, XLSX, CSV
+                </p>
+
+
+                <input type="file" id="fileInput" accept=".pdf,.docx,.xlsx,.csv" hidden>
+
+
+                <button id="chooseFile" class="primary-btn">
+
+                    Choose File
+
+                </button>
+
+            </div>
+
+
+            <!-- SELECTED FILE -->
+
+            <div id="fileInfo" class="file-info hidden">
+
+                <div>
+
+                    <strong id="fileName">
+                        File Name
+                    </strong>
+
+                    <p id="fileSize">
+                        File Size
+                    </p>
+
+                </div>
+
+
+                <button id="scanBtn" class="primary-btn">
+
+                    🔍 Scan Document
+
+                </button>
+
+            </div>
+
+
+            <!-- PROCESSING -->
+
+            <div id="processing" class="processing hidden">
+
+                <div class="loader"></div>
+
+                <div>
+
+                    <strong>
+                        Processing Document...
+                    </strong>
+
+                    <p>
+                        AI extraction will be performed
+                        by the backend.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div id="result" class="result">
+
+                <div class="empty">
+
+                    <span>📋</span>
+
+                    <h3>
+                        No document scanned
+                    </h3>
+
+                    <p>
+                        Upload a report and click
+                        "Scan Document".
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+{% endblock %}

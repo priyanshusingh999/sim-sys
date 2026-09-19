@@ -1,0 +1,49 @@
+/* =========================
+   PROGRESS PAGE
+========================= */
+
+.progress-container {
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    margin-top: 25px;
+
+}
+
+
+/* Progress chart area
+   Backend data/chart later */
+
+.progress-container .empty {
+
+    text-align: center;
+
+    padding: 40px;
+
+}
+
+
+.progress-container .empty span {
+
+    font-size: 40px;
+
+    display: block;
+
+    margin-bottom: 10px;
+
+}
+
+
+.progress-container .empty p {
+
+    color: #64748b;
+
+    margin-top: 8px;
+
+}

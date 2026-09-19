@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Project Schedule{% endblock %}
+{% block content %}
+        <section id="schedule" class="page active">
+
+            <h1>Project Schedule</h1>
+
+            <p class="section-description">
+                Compare planned and actual activities.
+            </p>
+
+
+            <div class="table-box">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Activity</th>
+
+                            <th>Planned</th>
+
+                            <th>Actual</th>
+
+                            <th>Variance</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="scheduleTable">
+
+                        <tr>
+
+                            <td colspan="5">
+
+                                No schedule data available.
+                                Backend will provide the data.
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+{% endblock %}

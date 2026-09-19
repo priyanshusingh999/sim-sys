@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}AI Assistant{% endblock %}
+{% block content %}
+        <section id="assistant" class="page active">
+
+            <h1>AI Project Assistant</h1>
+
+            <p class="section-description">
+                Ask questions about your project.
+            </p>
+
+
+            <div id="chatMessages" class="chat-box">
+
+                <div class="bot-message">
+
+                    <strong>
+                        🤖 ProjectAI
+                    </strong>
+
+                    <p>
+                        Hello! I am your project assistant.
+                        Ask me about project progress,
+                        delays or activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="chat-input">
+
+                <input type="text" id="chatInput" placeholder="Ask about your project...">
+
+
+                <button id="sendBtn" class="primary-btn">
+
+                    Send
+
+                </button>
+
+            </div>
+
+        </section>
+{% endblock %}

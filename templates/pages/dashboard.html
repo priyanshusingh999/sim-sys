@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+       <section id="dashboard" class="page active">
+
+            <div class="welcome">
+
+                <h1>Project Overview</h1>
+
+                <p>
+                    Track project execution, documents,
+                    schedule and risks from one place.
+                </p>
+
+            </div>
+
+
+            <!-- STAT CARDS -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <span>Overall Progress</span>
+
+                    <h2 id="progressValue">--</h2>
+
+                    <small>Project completion</small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>Total Activities</span>
+
+                    <h2 id="activityValue">--</h2>
+
+                    <small>Scheduled activities</small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>Delayed Activities</span>
+
+                    <h2 id="delayValue">--</h2>
+
+                    <small>Need attention</small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>Documents</span>
+
+                    <h2 id="documentValue">--</h2>
+
+                    <small>Processed reports</small>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT STATUS -->
+
+            <div class="dashboard-grid">
+
+                <div class="box">
+
+                    <h3>Project Status</h3>
+
+                    <div class="big-progress">
+
+                        <div id="progressBar" class="progress-fill">
+                        </div>
+
+                    </div>
+
+                    <p id="progressText">
+                        Backend data will appear here.
+                    </p>
+
+                </div>
+
+
+                <div class="box">
+
+                    <h3>AI Analysis</h3>
+
+                    <div class="ai-status">
+
+                        🤖
+
+                        <div>
+
+                            <strong>
+                                AI Monitoring
+                            </strong>
+
+                            <p>
+                                Ready for document analysis
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+{% endblock %}

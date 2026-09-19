@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>Project AI</h2>
+
+            <p>Smart Project Monitoring</p>
+
+        </div>
+
+        <nav>
+        
+            <button type="button"
+                    class="nav-btn {% if request.endpoint == 'dashboard' %}active{% endif %}"
+                    onclick="window.location.href='{{ url_for('dashboard') }}'">
+                🏠 Dashboard
+            </button>
+
+            <button type="button"
+                    class="nav-btn {% if request.endpoint == 'documents' %}active{% endif %}"
+                    onclick="window.location.href='{{ url_for('documents') }}'">
+                📄 Documents
+            </button>
+
+            <button type="button"
+                    class="nav-btn {% if request.endpoint == 'schedule' %}active{% endif %}"
+                    onclick="window.location.href='{{ url_for('schedule') }}'">
+                📅 Schedule
+            </button>
+
+            <button type="button"
+                    class="nav-btn {% if request.endpoint == 'progress' %}active{% endif %}"
+                    onclick="window.location.href='{{ url_for('progress') }}'">
+                📊 Progress
+            </button>
+
+            <button type="button"
+                    class="nav-btn {% if request.endpoint == 'risks' %}active{% endif %}"
+                    onclick="window.location.href='{{ url_for('risks') }}'">
+                ⚠️ Risks & Delays
+            </button>
+
+            <button type="button"
+                    class="nav-btn {% if request.endpoint == 'assistant' %}active{% endif %}"
+                    onclick="window.location.href='{{ url_for('assistant') }}'">
+                🤖 AI Assistant
+            </button>
+
+        </nav>
+
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+
+            <div>
+
+                <h2 id="pageTitle">Project Dashboard</h2>
+
+                <p id="pageSubtitle">
+                    Monitor your infrastructure project
+                </p>
+
+            </div>
+
+
+            <div class="profile">
+
+                👤 <span>{% if session.username %}{{ session.username }}{% else %}Guest {% endif %}</span>
+
+            </div>
+
+        </header>
+        {% block content %}{% endblock %}
+    </main>
+
+    <script type="module" src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

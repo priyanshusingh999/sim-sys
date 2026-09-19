@@ -1,0 +1,262 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+
+    color: #172033;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background: #111827;
+
+    color: white;
+
+    padding: 28px 18px;
+
+    z-index: 100;
+}
+
+
+/* Logo */
+
+.logo {
+    padding: 0 12px 35px;
+}
+
+.logo h2 {
+    font-size: 26px;
+
+    margin-bottom: 6px;
+}
+
+.logo p {
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* Navigation */
+
+.sidebar nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+/* Navigation button */
+
+.nav-btn {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #cbd5e1;
+
+    padding: 14px 15px;
+
+    text-align: left;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.25s;
+}
+
+
+/* Hover */
+
+.nav-btn:hover {
+    background: #1e293b;
+
+    color: white;
+}
+
+
+/* Active button */
+
+.nav-btn.active {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+    margin-left: 250px;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+    height: 75px;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    padding: 15px 32px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.topbar h2 {
+    font-size: 20px;
+}
+
+
+.topbar p {
+    font-size: 13px;
+
+    color: #64748b;
+
+    margin-top: 4px;
+}
+
+
+.profile {
+    color: #475569;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    display: none;
+
+    padding: 35px;
+}
+
+
+/* JavaScript page show karega */
+
+.page.active {
+    display: block;
+}
+
+
+/* =========================
+   COMMON BUTTON
+========================= */
+
+.primary-btn {
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   HIDDEN
+========================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .main {
+        margin-left: 200px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+}
